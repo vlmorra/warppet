@@ -20,7 +20,7 @@ interface Stats {
 export default function TamagotchiGame() {
   const {
     isAuthenticated,
-    profile: { username, fid }
+    profile: { username, }
   } = useProfile();
   
   // Состояния игры
