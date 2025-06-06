@@ -1,0 +1,159 @@
+.container {
+  width: 375px;
+  height: 667px;
+  margin: 0 auto;
+  background: #c1c1ff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: 'Bungee', cursive;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.startScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 10px;
+}
+
+.title {
+  font-size: 64px;
+  margin: 0;
+  line-height: 1;
+  color: #5a2d8a;
+  text-shadow: 3px 3px 0 #fff;
+}
+
+.createBtn {
+  margin-top: 40px;
+  padding: 15px 30px;
+  background: #5a2d8a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  font-family: 'Bungee', cursive;
+  transition: transform 0.2s;
+}
+
+.createBtn:hover {
+  transform: scale(1.05);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.petArea {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.actions button, .menu button {
+  padding: 12px;
+  background: #5a2d8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Bungee', cursive;
+  transition: background-color 0.2s;
+}
+
+.actions button:hover {
+  background: #7b4da8;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.closeBtn {
+  background: #ff4757 !important;
+  margin-top: 20px;
+}
+
+.closeBtn:hover {
+  background: #ff6b81 !important;
+}
+
+.petDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.petEmoji {
+  font-size: 80px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.petName {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #5a2d8a;
+}
+
+.petEmoji.sad {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.warning {
+  color: #ff4757;
+  font-size: 14px;
+  margin-top: 5px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  .title {
+    font-size: 48px;
+  }
+}
